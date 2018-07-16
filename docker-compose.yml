@@ -16,6 +16,7 @@ services:
       - 30303:30303
   nginx:
     image: "nginx"
+    restart: always
     links:
       - geth:node
       - alive-checker:checker
